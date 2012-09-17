@@ -1,0 +1,11 @@
+## REMOVE THIS COMMENT SECTION!! 
+## This policy restricts the user to only launch instances from emi-86903B67
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Allow",
+"Action":"ec2:RunInstances",
+"Resource":"arn:aws:ec2:::image/emi-86903B67",
+}]
+}

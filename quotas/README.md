@@ -30,6 +30,8 @@ This could then be extended to cover a specific resource.  A good example would 
 >}]  
 >}   
 
+Thus the above example would evaluate quota based on a user calling ec2:CreateVolume in the cluster2 availability zone.
+
 The following resource types are supported:
 
 * image

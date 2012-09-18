@@ -30,3 +30,14 @@ This could then be extended to cover a specific resource.  A good example would 
 >}]  
 >}   
 
+The following resource types are supported:
+
+* image
+* securitygroup
+* address
+* availabilityzone
+* instance
+* keypair
+* volume
+* snapshot
+* vmtype

@@ -1,0 +1,18 @@
+# REMOVE THESE QUOTES!!
+# This policy limits the number of images an account or user can register
+# Apply this policy to the account or user only
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Limit",
+"Action":"ec2:RegisterImage",
+"Resource":"*",
+"Condition":    {
+                "NumericLessThanEquals":{
+                        "ec2:quota-imagenumber":"5"
+                                        }
+                }
+}]
+}
+

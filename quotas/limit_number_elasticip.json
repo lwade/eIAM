@@ -1,0 +1,18 @@
+# REMOVE THESE QUOTES!!
+# This policy limits the number of elastic IP's an account or user can reserve and allocate
+# Apply this policy to the account or user only
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Limit",
+"Action":"ec2:AllocateAddress",
+"Resource":"*",
+"Condition":	{
+		"NumericLessThanEquals":{
+			"ec2:quota-addressnumber":"5"
+					}
+		}
+}]
+}
+

@@ -1,0 +1,18 @@
+# REMOVE THESE QUOTES!!
+# This policy limits the number of snapshots an account or user can create
+# Apply this policy to the account or user only
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Limit",
+"Action":"ec2:CreateSnapshot",
+"Resource":"*",
+"Condition":    {
+                "NumericLessThanEquals":{
+                        "ec2:quota-snapshotnumber":"5"
+                                        }
+                }
+}]
+}
+

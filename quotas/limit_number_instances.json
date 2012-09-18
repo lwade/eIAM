@@ -1,0 +1,18 @@
+# REMOVE THESE COMMENTS!!
+# This policy limits the number of instances an account or user can launch
+# Apply quota policies to either account or user only.
+
+{
+"Statement":[{
+"Sid":"2",
+"Effect":"Limit",
+"Action":"ec2:RunInstances",
+"Resource":"*",
+"Condition":	{
+	"NumericLessThanEquals":{
+		"ec2:quota-vminstancenumber":"10"
+				}
+		}	
+}]
+}
+

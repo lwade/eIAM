@@ -1,0 +1,18 @@
+# REMOVE THESE QUOTES!!
+# This policy limits the total combined size of volumes an account or user can create
+# Apply this policy to the account or user only
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Limit",
+"Action":"ec2:CreateVolume",
+"Resource":"*",
+"Condition":    {
+                "NumericLessThanEquals":{
+                        "ec2:quota-volumetotalsize":"50"
+                                        }
+                }
+}]
+}
+

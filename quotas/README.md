@@ -1,3 +1,6 @@
+* See the basic directory for simple quota examples
+* See the advanced directory for combined quotas; quotas based on resource 
+
 Starting with Eucalyptus 3.0, quotas are introduced to enforce resource limits on accounts and users.  The IAM policy language has been extended to add an additional effect key; "Limit".  The "Limit" key signifies to the policy parser that the policy statement is a quota. As with standard IAM policies, a quota statement contains both "Action" and "Resource" fields. This allows enforcement of the quota based on matched requests; for example, limit the number of volumes when the ec2:CreateVolume action is called:
 
 >{  

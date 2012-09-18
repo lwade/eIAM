@@ -1,0 +1,17 @@
+# REMOVE THESE QUOTES!!
+# This policy limits the number of instances launched from a particular image by an account or user
+# Apply this policy to the account or user only
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Limit",
+"Action":"ec2:RunInstances",
+"Resource":"arn:aws:ec2:::image/emi-ABCDEF",
+"Condition": {
+                "NumericLessThanEquals":{
+                        "ec2:quota-vminstancenumber":"3"
+                                        }
+                }
+}]
+}

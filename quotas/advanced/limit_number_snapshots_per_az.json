@@ -1,0 +1,17 @@
+# REMOVE THESE QUOTES!!
+# This policy limits the number of snapshots an account or user can create within an availability zone or cluster
+# Apply this policy to the account or user only
+
+{
+"Statement":[{
+"Sid":"1",
+"Effect":"Limit",
+"Action":"ec2:CreateSnapshot",
+"Resource":"arn:aws:ec2:::availabilityzone/cluster2",
+"Condition": {
+                "NumericLessThanEquals":{
+                        "ec2:quota-snapshotnumber":"10"
+                                        }
+                }
+}]
+}

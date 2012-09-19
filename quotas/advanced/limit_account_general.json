@@ -1,3 +1,7 @@
+# REMOVE THESE QUOTES!!
+# This is a multi-statement policy to enforce a general set of quotas on a user or account 
+# Apply this policy to the account or user only
+
 {
 "Statement":[{
 "Sid":"1",
@@ -26,7 +30,7 @@
 "Resource":"*",
 "Condition": {
 		"NumericLessThanEquals":{
-			"ec2:quota-volumetotalsize":"400"
+			"ec2:quota-volumetotalsize":"10"
 					}
 			}
 		},
@@ -36,7 +40,7 @@
 "Resource":"*",
 "Condition": {
 		"NumericLessThanEquals":{
-			"ec2:quota-addressnumber":"5"
+			"ec2:quota-addressnumber":"3"
 					}
 			}
 		}
